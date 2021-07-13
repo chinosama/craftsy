@@ -17,6 +17,8 @@ body{
     color: #2e2f34;
     max-width: 1140px;
     margin: 0 auto;
+    background-image: url('/images/bg-2.png');
+
 }
 
 :root{

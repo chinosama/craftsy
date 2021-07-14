@@ -1,14 +1,14 @@
-.register main{
+.register main, .login main{
     width: 350px;
     background-color: rgba(245, 245, 245, 0.541);
     margin: 0 auto;
 }
 
-.register h1{
+.register h1, .login h1{
     text-align: center;
 }
 
-.register .box-form{
+.register .box-form, .login .box-form{
     display: flex;
     flex-direction: column;
     margin: 20px 0;
@@ -18,12 +18,15 @@
     margin: 20px 0;
 }
 
-.register .box-form input, select{
+.register .box-form input, select, .login .box-form input{
     margin: 5px 0;
+    height: 25px;
 }
 
-.register .box-form small{
+.register .box-form small, .login small{
     color: red;
+    margin: 10px 0;
+    display: inline-block;
 }
 
 .register .options{
@@ -38,3 +41,35 @@
 .register .box-form textarea{
     resize: none;
 }
+
+.register .box-button {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0; 
+}
+.register .box-button button, .login .box-button button {
+    padding: 8px 0;
+    color: whitesmoke;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.register .box-button button:hover{
+    background-color: rgb(20, 137, 167);
+}
+
+
+/*Login*/
+
+.login .box-remember{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login .box-remember input{
+    margin-right: 5px;
+}
+

@@ -3,13 +3,21 @@ const app = express();
 const path = require('path');
 const port = 3030;
 
+/*routing*/
+
+const mainRouter = require('./routes/main');
+const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
+
+app.use('/',mainRouter);
+app.use('products', productsRouter);
+app.use('/users',usersRouter);
+
+
+/*settings*/
+
 app.use(express.static('public'));
 
-app.get('/',(req,res)=> res.sendFile(path.join(__dirname,'views','index.html')));
-
-app.get('/register',(req,res)=> res.sendFile(path.join(__dirname,'views','register.html')));
-
-app.get('/login',(req,res)=> res.sendFile(path.join(__dirname,'views','login.html')));
 
 
 app.listen(port,()=> console.log(`Servidor corriendo en http//:localhost:${port}`));
